@@ -44,7 +44,11 @@ main.journal-page>section.journal-header:first-child { background:transparent; b
 .journal-newsletter button { display:flex; width:100%; margin-top:10px; cursor:pointer; }
 .journal-newsletter button:disabled { opacity:.65; cursor:wait; transform:none; }
 .journal-newsletter small { display:block; font-size:9px; line-height:1.7; color:#8d7b98; margin-top:12px; }.journal-newsletter small a { display:inline; white-space:nowrap; text-decoration:underline; }
-.journal-form-status { font-size:12px; line-height:1.6; color:#715184; margin-top:12px; }
+.journal-form-status { font-size:12px; line-height:1.6; color:#c81e1e; margin-top:12px; }
+.journal-newsletter-thanks { text-align:center; padding-block:6px; }
+.journal-newsletter-thanks:focus { outline:none; }
+.journal-newsletter-thanks>span { display:grid; place-items:center; width:48px; height:48px; margin:0 auto 14px; border-radius:50%; background:#e2f0e9; color:#34765e; }
+.journal-newsletter .journal-newsletter-thanks p { margin:10px 0 0; }
 .journal-sidebar :is(a,button):focus-visible { outline:2px solid #9876ac; outline-offset:4px; }
 .journal-newsletter input:focus { outline:none; border-color:#9876ac; box-shadow:none; }
 @media(max-width:1100px) { .journal-article { padding-right:30px; }.journal-sidebar { padding-left:20px; }.journal-prose { font-size:16px; } }

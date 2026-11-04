@@ -1,13 +1,15 @@
 "use client";
 
 import { Turnstile } from '@/components/ui/Turnstile';
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { ArrowUpRight, Check, Link2 } from "lucide-react";
 
 export function ArticleSidebar({ sections, title, slug }: { sections: { id: string; title: string; level: number }[]; title: string; slug: string }) {
   const [active, setActive] = useState(sections[0]?.id ?? "");
   const [copied, setCopied] = useState(false);
   const [message, setMessage] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const thanks = useRef<HTMLDivElement>(null);
   const [captchaToken,setCaptchaToken]=useState('');
   const [captchaReset,setCaptchaReset]=useState(0);
   const [busy, setBusy] = useState(false);
@@ -19,14 +21,14 @@ export function ArticleSidebar({ sections, title, slug }: { sections: { id: stri
     sections.forEach(section => { const el = document.getElementById(section.id); if (el) observer.observe(el); });
     return () => observer.disconnect();
   }, [sections]);
+  useEffect(() => { if (subscribed) thanks.current?.focus({ preventScroll: true }); }, [subscribed]);
   async function copy() {
     try { await navigator.clipboard.writeText(window.location.href.split("#")[0]); setCopied(true); }
-    catch { setMessage("Unable to copy. Please copy the address from your browser."); }
+    catch { setMessage("Could not copy the link."); }
   }
   async function subscribe(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = event.currentTarget;
-    const email = String(new FormData(form).get("email") || "").trim();
+    const email = String(new FormData(event.currentTarget).get("email") || "").trim();
     if(!captchaToken){setMessage('Please complete the verification.');return;}
     setBusy(true); setMessage("");
     try {
@@ -36,13 +38,13 @@ export function ArticleSidebar({ sections, title, slug }: { sections: { id: stri
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.message || 'Please try again later.');
-      setMessage(result.message); form.reset();
+      setSubscribed(true);
     } catch (error) { setMessage(error instanceof Error ? error.message : "Please try again later."); }
     finally { setBusy(false);setCaptchaToken('');setCaptchaReset(n=>n+1); }
   }
   return <aside className="journal-sidebar" aria-label="Article tools"><div className="journal-sidebar-sticky">
     {sections.length > 0 && <nav aria-label="Table of contents"><span className="journal-kicker">IN THIS ARTICLE</span><h2>Table of contents</h2><ol className="journal-toc">{sections.map(section => <li key={section.id} className={section.level === 3 ? "journal-toc-sub" : ""}><a href={`#${section.id}`} aria-current={active === section.id ? "location" : undefined}>{section.title}</a></li>)}</ol></nav>}
-    <section className="journal-newsletter" aria-labelledby="journal-newsletter-heading"><span className="journal-kicker">THE DAD JOURNAL</span><h2 id="journal-newsletter-heading">A little clarity.<br/><em>In your inbox.</em></h2><p>Fresh perspectives on connected care and your family’s health.</p><form onSubmit={subscribe}><label htmlFor="journal-email">Email address</label><input id="journal-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required maxLength={254}/><Turnstile action="newsletter" onToken={setCaptchaToken} resetKey={captchaReset}/><button className="dad-button" disabled={busy || !captchaToken} type="submit">{busy ? "Submitting…" : "Sign me up"}<ArrowUpRight size={16}/></button><small>I agree to DAD emails. <a href="/privacy-policy">Privacy policy</a>.</small></form></section>
+    <section className="journal-newsletter" aria-labelledby="journal-newsletter-heading">{subscribed ? <div ref={thanks} tabIndex={-1} role="status" className="journal-newsletter-thanks"><span><Check size={22} aria-hidden="true"/></span><h2 id="journal-newsletter-heading">Thank you.<br/><em>You’re signed up.</em></h2><p>Fresh perspectives on connected care will reach your inbox.</p></div> : <><span className="journal-kicker">THE DAD JOURNAL</span><h2 id="journal-newsletter-heading">A little clarity.<br/><em>In your inbox.</em></h2><p>Fresh perspectives on connected care and your family’s health.</p><form onSubmit={subscribe}><label htmlFor="journal-email">Email address</label><input id="journal-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required maxLength={254}/><Turnstile action="newsletter" onToken={setCaptchaToken} resetKey={captchaReset}/><button className="dad-button" disabled={busy || !captchaToken} type="submit">{busy ? "Submitting…" : "Sign me up"}<ArrowUpRight size={16}/></button><small>I agree to DAD emails. <a href="/privacy-policy">Privacy policy</a>.</small></form></>}</section>
     <p className="journal-form-status" role="status">{message}</p>
     <section className="journal-share" aria-labelledby="journal-share-heading"><h2 id="journal-share-heading">Share this perspective</h2><div className="journal-share-links">
       <button type="button" onClick={copy} aria-label={copied ? "Link copied" : "Copy article link"} title={copied ? "Link copied" : "Copy article link"}>{copied ? <Check size={18} aria-hidden="true"/> : <Link2 size={18} aria-hidden="true"/>}</button>
