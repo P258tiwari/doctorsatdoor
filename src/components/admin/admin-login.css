@@ -1,0 +1,47 @@
+.dad-admin-login{min-height:100svh;display:grid;place-items:center;padding:64px 24px;background:radial-gradient(ellipse at 85% 15%,#e4d3e9 0,transparent 58%),radial-gradient(ellipse at 5% 90%,#eee5f4 0,transparent 55%),#f8f5fa;color:#211a43}
+.dad-admin-login-content{width:100%;max-width:460px}
+.dad-admin-login-heading{margin-bottom:36px}
+.dad-admin-login-brand{display:inline-flex;margin-bottom:28px;border-radius:18px}
+.dad-admin-login-brand img{border-radius:18px}
+.dad-admin-login-eyebrow{display:block;font-size:10px;font-weight:600;letter-spacing:2px;color:#796087;margin-bottom:18px}
+.dad-admin-login-heading h1{font-size:clamp(32px,4vw,42px);line-height:1.14;letter-spacing:-1.4px;font-weight:550;margin:0 0 18px}
+.dad-admin-login-heading h1 em{font-family:Georgia,serif;color:#89659e;font-weight:400}
+.dad-admin-login-heading p{font-size:14px;line-height:1.7;color:#6f617c;margin:0}
+.dad-admin-login-form{display:grid;gap:22px}
+.dad-admin-login-field{display:grid;gap:9px}
+.dad-admin-login-field label{font-size:13px;font-weight:500;color:#493857}
+.dad-admin-login-field input{width:100%;min-height:54px;padding:14px 17px;background:rgb(255 255 255 / 26%);border:1px solid #cbb8d5;border-radius:14px;color:#211a43;font-size:15px;outline:none;box-shadow:none;transition:border-color .2s}
+.dad-admin-login-field input:focus{border-color:#785191;outline:none;box-shadow:none}
+.dad-admin-login-field input::placeholder{color:#8b7f96}
+.dad-admin-login-submit{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:60px;margin-top:4px;padding:8px 9px 8px 20px;border:0;border-radius:17px;background:#211a4b;color:white;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s}
+.dad-admin-login-submit>span:last-child{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgb(255 255 255 / 9%);font-size:20px;transition:transform .2s}
+.dad-admin-login-submit:hover{background:#3d2957}
+.dad-admin-login-submit:hover>span:last-child{transform:translate(2px,-2px)}
+.dad-admin-login-submit:disabled{opacity:.65;cursor:wait}
+.dad-admin-login-footer{margin-top:32px;padding-top:24px;border-top:1px solid #ded0e6;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.dad-admin-login-footer a{display:inline-flex;gap:9px;align-items:center;font-size:12px;color:#493857;text-decoration:none}
+.dad-admin-login-footer a span{transition:transform .2s}
+.dad-admin-login-footer a:hover span{transform:translateX(-3px)}
+.dad-admin-login-footer p{font-size:10px;color:#7a6c87;margin:0}
+.dad-admin-login-error{font-size:13px;color:#9d2748;line-height:1.6}
+.dad-admin-login a:focus-visible,.dad-admin-login-submit:focus-visible{outline:2px solid #89659e;outline-offset:4px}
+@media(max-width:480px){.dad-admin-login{padding:40px 24px}.dad-admin-login-heading h1{font-size:34px}.dad-admin-login-footer{align-items:flex-start;flex-direction:column;gap:14px}}
+@media(prefers-reduced-motion:reduce){.dad-admin-login *{transition:none!important}}
+
+.dad-admin-password-wrap{position:relative}
+.dad-admin-password-wrap input{padding-right:54px}
+.dad-admin-password-toggle{position:absolute;right:5px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:10px;background:transparent;color:#796087;cursor:pointer}
+.dad-admin-password-toggle:hover{color:#211a43;background:rgb(137 101 158 / 8%)}
+.dad-admin-password-toggle:focus-visible{outline:2px solid #89659e;outline-offset:-3px}
+
+.dad-admin-loader{display:flex;flex-direction:column;align-items:center;gap:28px}
+.dad-admin-loader-mark{position:relative;display:grid;place-items:center;width:112px;height:112px}
+.dad-admin-loader-mark img{border-radius:19px;box-shadow:0 12px 32px #211a4314}
+.dad-admin-loader-orbit{position:absolute;inset:0;border:1.5px solid #89659e20;border-top-color:#89659e;border-right-color:#89659e80;border-radius:50%;animation:dad-admin-orbit 1.8s linear infinite}
+.dad-admin-loader-orbit::after{content:"";position:absolute;top:14px;right:12px;width:6px;height:6px;border-radius:50%;background:#89659e;box-shadow:0 0 12px #89659e55}
+.dad-admin-loader-label{font-size:10px;font-weight:600;letter-spacing:3px;color:#796087}
+.dad-admin-loader-track{width:120px;height:3px;overflow:hidden;border-radius:4px;background:#89659e18}
+.dad-admin-loader-track span{display:block;width:45%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#bda2cd,#655080);animation:dad-admin-progress 1.8s ease-in-out infinite}
+@keyframes dad-admin-orbit{to{transform:rotate(360deg)}}
+@keyframes dad-admin-progress{0%{transform:translateX(-110%)}100%{transform:translateX(330%)}}
+@media(prefers-reduced-motion:reduce){.dad-admin-loader-orbit,.dad-admin-loader-track span{animation:none}.dad-admin-loader-track span{width:100%;opacity:.6}}

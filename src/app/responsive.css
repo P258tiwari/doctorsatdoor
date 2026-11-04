@@ -1,0 +1,98 @@
+/* Shared responsive rhythm. Keep content in flow instead of masking overflow. */
+body :is(main, section, article, form, fieldset) { min-width:0; }
+body :is(h1,h2,h3,p,li) { overflow-wrap:break-word; }
+body :is(.legal-copy,.journal-prose,.cms-prose) { overflow-wrap:anywhere; }
+body :is(.legal-copy,.journal-prose,.cms-prose) img { max-width:100%; height:auto; }
+
+@media(max-width:1024px) {
+  html { scrollbar-gutter:auto; }
+  body .dad-container { width:calc(100% - 48px); }
+  body :is(main,.cms-dialog) :is(input:not([type=checkbox]):not([type=radio]):not([type=file]),textarea,select),
+  body .custom-select-trigger { font-size:16px; }
+  body :is(.legal-copy,.journal-prose) { font-size:16px; line-height:1.8; }
+  body :is(.contact-intro,.contact-story,.legal-page-intro,.security-intro,.security-rights-intro,.home-intro-copy,.report-benefits,.section-heading,.feature-panel,.trust-grid,.planned-features) p,
+  body :is(.section-intro,.editorial-list p,.steps-grid p,.roadmap-grid p,.product-card-copy p) { font-size:15px; line-height:1.75; }
+  body :is(.journal-newsletter p,.journal-newsletter label,.deletion-confirmation span,.legal-toc a) { font-size:14px; line-height:1.7; }
+  body :is(.journal-newsletter small,.footer-disclaimer,.contact-categories button>span:last-child) { font-size:12px; line-height:1.65; }
+  body :is(.contact-form-panel,.deletion-form-panel) label { font-size:14px; line-height:1.5; }
+  body :is(.cms-page,.cms-dialog,.workspace-main) :is(.cms-field>small,.cms-field>span,.cms-image-description>small) { font-size:12px; line-height:1.6; }
+  body .cms-card-row { flex-wrap:wrap; min-width:0; }
+  body .cms-card-main { flex:1 1 200px; }
+  body .cms-entry-actions { flex-wrap:wrap; }
+  body .cms-form-heading { flex-wrap:wrap; gap:16px; }
+  body .cms-toolbar { flex-wrap:wrap; overflow:visible; position:static; gap:4px; }
+  body .cms-tool-group { flex-wrap:wrap; padding:4px; }
+  body .cms-toolbar button { width:40px; height:44px; }
+}
+
+@media(max-width:767px) {
+  body .dad-container { width:calc(100% - 40px); }
+  body .admin-shell .workspace-sidebar { padding:20px 16px 14px; }
+  body .admin-shell .workspace-sidebar nav { flex-wrap:nowrap; overscroll-behavior-x:contain; }
+  body .workspace-sidebar-bottom { align-items:center; gap:16px; }
+  body .workspace-sidebar-bottom>a { min-height:44px; font-size:14px; }
+  body .admin-shell .workspace-main { padding:0 16px 48px; }
+  body .workspace-main h1 { font-size:clamp(28px,6vw,36px); letter-spacing:-1px; }
+  body .workspace-main .text-xs { font-size:14px; }
+  body .workspace-main .p-6 { padding:18px; }
+  body .workspace-main .divide-y>div { flex-wrap:wrap; }
+  body .workspace-main .divide-y>div>div { min-width:0; }
+  body .workspace-main .divide-y .flex { flex-wrap:wrap; }
+  body .workspace-topbar { margin-bottom:24px; }
+  body .cms-page { padding:24px 16px 48px; }
+  body :is(.cms-panel,.cms-title-section,.cms-release-form) { padding:18px; }
+  body .cms-release-form>.cms-panel { padding:18px 0 0; border-inline:0; border-radius:0; }
+  body .cms-card-row { padding:18px; gap:16px; }
+  body .cms-card-main { flex-basis:100%; }
+  body .cms-article-thumb { width:100%; height:auto; aspect-ratio:16/9; }
+  body .cms-entry-actions { width:100%; justify-content:flex-end; }
+  body .cms-content-panel :is(.cms-icon,.cms-link), body .cms-dialog .cms-icon { min-height:44px; }
+  body .cms-dialog { max-width:calc(100% - 24px); max-height:calc(100dvh - 24px); }
+  body :is(.cms-dialog-body,.cms-dialog-header) { padding:18px; }
+  body .cms-dialog-header h2 { font-size:22px; }
+  body .cms-writing-heading { flex-wrap:wrap; padding:18px; }
+  body .cms-writing-heading p { font-size:13px; max-width:none; }
+  body .cms-toolbar { flex-wrap:wrap; overflow:visible; position:static; gap:4px; }
+  body .cms-tool-group { flex-wrap:wrap; padding:4px; }
+  body .cms-toolbar button { width:40px; height:44px; }
+  body .cms-rich-editor .tiptap.cms-prose { padding:22px 18px; font-size:16px; }
+  body .cms-editor-footer { font-size:12px; line-height:1.6; }
+  body .dad-admin-login { padding:36px 20px; }
+  body .dad-admin-login-footer p { font-size:12px; }
+}
+
+@media(max-width:480px) {
+  body .cms-two-fields { grid-template-columns:minmax(0,1fr); }
+  body .dad-container { width:calc(100% - 32px); }
+  body :is(.contact-form-panel,.deletion-form-panel,.deletion-warning) { padding:22px 16px; }
+  body .contact-categories { grid-template-columns:1fr; }
+  body .contact-categories button { min-height:72px; padding:12px; }
+  body .contact-categories button>span { -webkit-line-clamp:unset; overflow:visible; }
+  body .contact-categories button>span:first-child { font-size:14px; }
+  body .contact-email { font-size:13px; gap:10px; }
+  body .contact-email>span:not(.contact-email-icon) { min-width:0; overflow-wrap:anywhere; }
+  body :is(.contact-heading h1,.legal-page-heading h1,.security-heading h1,.inner-hero h1) { font-size:clamp(32px,9vw,42px); letter-spacing:-1.3px; }
+  body .home-page .product-grid { grid-template-columns:1fr; }
+  body .home-page .product-card-copy p { font-size:15px; }
+  body .journal-share-links { flex-wrap:wrap; }
+  body .journal-newsletter { padding:22px 16px; }
+  body .cms-header-actions { width:100%; gap:10px; }
+  body .cms-header-actions>span { width:100%; }
+  body .cms-primary, body .cms-secondary { white-space:normal; }
+  body .cms-manager-item { flex-wrap:wrap; gap:10px; }
+  body .cms-manager-item>div { min-width:0; overflow-wrap:anywhere; }
+  body .cms-page .cms-title-input { font-size:24px; }
+}
+
+@media(max-width:359px) {
+  body .dad-nav .dad-brand strong { font-size:14px; }
+  body .dad-nav .dad-brand small { font-size:10px; }
+  body .dad-nav .dad-brand-mark { width:40px; height:40px; }
+  body .dad-nav .nav-inner { gap:8px; }
+  body .workspace-stats { grid-template-columns:1fr; }
+  body .workspace-stats>div { padding:18px!important; }
+  body .workspace-stats>div>div:first-child span { font-size:12px; }
+  body .workspace-stats>div>div:last-child { font-size:13px; }
+  body .workspace-sidebar-bottom>button { min-width:120px; }
+  body .cms-dialog-body, body .cms-dialog-header { padding:14px; }
+}

@@ -1,0 +1,17 @@
+.vision-hero { position:relative; padding-top:150px; padding-bottom:35px; }
+.vision-hero-top { display:flex; align-items:center; justify-content:space-between; gap:22px; }
+.vision-live { display:inline-flex; align-items:center; gap:8px; font-size:11px; color:#397764; white-space:nowrap; }.vision-live>span { width:6px; height:6px; border-radius:50%; background:#429779; }
+.vision-hero-content { text-align:center; max-width:1050px; margin:65px auto 55px; }
+.vision-hero-kicker { color:#9c7dab; letter-spacing:2px; font-size:9px; font-weight:600; }
+.vision-hero h1 { font-size:clamp(46px,5.6vw,82px); line-height:1.08; font-weight:500; letter-spacing:-3px; margin:22px 0 28px; }
+.vision-hero h1 em { color:#8b659a; }
+.vision-hero-content>p { max-width:930px; margin:0 auto 30px; font-size:16px; line-height:1.9; color:#7c6d87; text-wrap:balance; }
+.vision-hero-actions { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:28px; }
+.vision-first-step { display:flex; align-items:center; justify-content:center; gap:9px; color:#8b709b; font-size:11px; line-height:1.7; margin-top:24px; }.vision-first-step svg { flex-shrink:0; }
+.vision-principles { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:35px; padding:28px 0 0; border-top:1px solid #dfd3e7; }
+.vision-principles>div+div { border-left:1px solid #e2d7e9; padding-left:35px; }
+.vision-principles>div>span { color:#9a80a9; font-size:9px; letter-spacing:1.6px; }
+.vision-principles h2 { font-size:19px; line-height:1.4; font-weight:500; letter-spacing:-.3px; margin:12px 0 8px; }
+.vision-principles p { font-size:12px; line-height:1.8; color:#82718e; max-width:320px; margin:0; }
+@media(max-width:760px) { .vision-hero { padding-top:125px; }.vision-hero-top { flex-wrap:wrap; gap:12px; }.vision-hero-top .eyebrow { font-size:8px; }.vision-hero-content { margin:42px auto; }.vision-hero h1 { font-size:clamp(38px,7vw,54px); letter-spacing:-1.8px; }.vision-hero-content>p { font-size:14px; }.vision-principles { gap:20px; }.vision-principles>div+div { padding-left:20px; }.vision-principles h2 { font-size:16px; } }
+@media(max-width:540px) { .vision-hero-content { text-align:left; }.vision-hero-kicker { font-size:8px; letter-spacing:1.3px; }.vision-hero h1 { font-size:40px; line-height:1.13; }.vision-hero-actions { justify-content:flex-start; gap:22px; }.vision-first-step { justify-content:flex-start; align-items:flex-start; font-size:10px; }.vision-principles { grid-template-columns:1fr; padding-top:0; gap:0; }.vision-principles>div { padding:20px 0; }.vision-principles>div+div { border-left:0; border-top:1px solid #e2d7e9; padding-left:0; }.vision-principles h2 { font-size:19px; margin-top:9px; }.vision-principles p { max-width:none; } }

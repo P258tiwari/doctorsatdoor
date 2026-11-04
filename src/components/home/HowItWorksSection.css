@@ -1,0 +1,31 @@
+.care-moments-layout {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);
+  gap:clamp(40px,7vw,110px);
+  align-items:start;
+}
+.care-moments-intro { padding-top:10px; }
+.home-page .care-moments-intro h2 { font-size:clamp(34px,3.5vw,50px); line-height:1.15; margin:24px 0; letter-spacing:-1.7px; }
+.home-page .care-moments-intro h2 em { color:#8b659a; }
+.care-moments-intro>p { max-width:380px; color:#786982; font-size:16px; line-height:1.85; margin:0 0 30px; }
+.care-moments-note { display:flex; align-items:center; gap:8px; color:#74647e; font-size:12px; margin-top:38px; }
+.care-moments-note>span { width:6px; height:6px; border-radius:50%; background:#399c80; }
+.care-moment { display:grid; grid-template-columns:48px minmax(0,1fr); gap:20px; padding:30px 0; border-top:1px solid #ded3e7; }
+.care-moment:first-child { padding-top:10px; border-top:0; }
+.care-moment-icon { width:48px; height:48px; display:grid; place-items:center; background:#ede3f4; color:#8b659a; border-radius:15px; }
+.care-moment-context { display:block; color:#8b659a; font-size:9px; font-weight:600; letter-spacing:1.5px; line-height:1.6; margin:1px 0 10px; }
+.care-moment h3 { font-size:clamp(21px,1.8vw,26px); line-height:1.35; letter-spacing:-.5px; font-weight:500; margin:0 0 12px; color:#29213d; }
+.care-moment p { color:#786982; font-size:14px; line-height:1.85; margin:0 0 16px; }
+.care-moment-tools { color:#695177; font-size:11px; line-height:1.8; }
+.care-moments-disclaimer { border-top:1px solid #ded3e7; padding-top:18px; margin:0; color:#85758e; font-size:11px; line-height:1.8; }
+@media(max-width:850px) {
+  .care-moments-layout { grid-template-columns:1fr; gap:38px; }
+  .care-moments-intro>p { max-width:560px; }
+  .care-moments-note { margin-top:22px; }
+}
+@media(max-width:480px) {
+  .care-moment { grid-template-columns:36px minmax(0,1fr); gap:14px; padding:24px 0; }
+  .care-moment-icon { width:36px; height:36px; border-radius:11px; }
+  .care-moment-icon svg { width:20px; height:20px; }
+  .care-moment-context { font-size:8px; letter-spacing:1px; }
+}

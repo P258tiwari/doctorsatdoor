@@ -1,0 +1,12 @@
+.product-device-scene { position:relative; width:100%; min-height:600px; display:grid; place-items:center; }
+.product-device-waves { position:absolute; top:-8%; left:-18%; width:230%; height:116%; z-index:-1; pointer-events:none; opacity:.65; mask-image:radial-gradient(ellipse 55% 43% at 40% 50%,#000 20%,transparent 90%); -webkit-mask-image:radial-gradient(ellipse 55% 43% at 40% 50%,#000 20%,transparent 90%); }
+.product-iphone16 { position:relative; width:250px; margin:0; padding:5px; border:1px solid #9899a2; border-radius:42px; background:linear-gradient(110deg,#b4b5bc,#34353c 16%,#74757c 52%,#191a20 83%,#aaaab2); box-shadow:1px 1px 0 #dad7df inset,-1px -1px 0 #08090c inset,16px 24px 36px #321f5529; transform:rotate(-5deg); }
+.product-device-screen { position:relative; overflow:hidden; border:5px solid #08080b; border-radius:36px; background:#1f194c; }
+.product-device-screen img { display:block; width:100%; height:auto; }
+.product-device-island { position:absolute; top:2.4%; left:50%; transform:translateX(-50%); width:29%; height:4%; background:#050506; border-radius:30px; box-shadow:0 0 0 1px #141419; }
+.product-device-island>span { position:absolute; width:7px; height:7px; right:6px; top:50%; transform:translateY(-50%); background:radial-gradient(circle at 35% 35%,#304064,#0e1221 60%); border:1px solid #141622; border-radius:50%; }
+.product-device-home { position:absolute; bottom:1.1%; left:34%; width:32%; height:3px; border-radius:6px; background:#26212f; opacity:.8; }
+.product-device-action,.product-device-volume,.product-device-power,.product-device-camera { position:absolute; width:3px; border-radius:3px; background:linear-gradient(90deg,#292930,#9899a2,#34343e); }
+.product-device-action { left:-3px; top:17%; height:18px; }.product-device-volume { left:-3px; top:25%; height:33px; box-shadow:0 43px 0 #65656f; }.product-device-power { right:-3px; top:30%; height:52px; }.product-device-camera { right:-3px; top:63%; height:30px; }
+@media(max-width:640px) { .product-device-scene { min-height:530px; }.product-iphone16 { width:220px; border-radius:38px; }.product-device-screen { border-radius:32px; } }
+@media(max-width:640px) { .product-device-waves { left:-15%; width:130%; height:145%; mask-image:radial-gradient(ellipse 65% 50% at 50% 40%,#000 10%,transparent 85%); -webkit-mask-image:radial-gradient(ellipse 65% 50% at 50% 40%,#000 10%,transparent 85%); } }

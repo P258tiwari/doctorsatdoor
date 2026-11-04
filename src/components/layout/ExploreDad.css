@@ -1,0 +1,16 @@
+.dad-updates-dialog { position:fixed; inset:0; margin:auto; width:min(600px,calc(100% - 32px)); max-height:calc(100dvh - 40px); overflow:auto; padding:36px; border:1px solid #e1d5e9; border-radius:26px; color:#29213d; background:radial-gradient(ellipse at top right,#eaddf2,transparent 65%),#faf9fc; box-shadow:0 30px 100px #17112740; }
+.dad-updates-dialog::backdrop { background:#19132699; backdrop-filter:blur(6px); }
+.dad-updates-close { position:absolute; top:18px; right:18px; display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:#eae1f1; color:#5e4670; cursor:pointer; }
+.dad-updates-logo { border-radius:15px; margin-bottom:22px; }
+.dad-updates-dialog .eyebrow { display:block; color:#8b659a; font-size:10px; }
+.dad-updates-dialog h2 { font-size:36px; line-height:1.15; letter-spacing:-1px; margin:16px 0; font-weight:500; }
+.dad-updates-dialog h2 em { font-family:Georgia,serif; color:#8b659a; }
+.dad-updates-dialog p { color:#786982; font-size:14px; line-height:1.7; }
+.dad-updates-list { margin-top:24px; }
+.dad-updates-list>div { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:17px 0; border-top:1px solid #ded3e7; }
+.dad-updates-list h3 { font-size:16px; margin:0 0 5px; font-weight:600; }
+.dad-updates-list p { margin:0; font-size:12px; }
+.dad-updates-list>div>span { flex-shrink:0; border-radius:30px; padding:5px 9px; background:#eae0f2; color:#79528f; font-size:10px; }
+.dad-updates-dialog .dad-updates-note { font-size:11px; margin:18px 0 24px; }
+.dad-updates-actions { display:flex; align-items:center; flex-wrap:wrap; gap:22px; }
+@media(max-width:480px) { .dad-updates-dialog { padding:26px 20px; }.dad-updates-dialog h2 { font-size:31px; }.dad-updates-list>div { gap:10px; } }

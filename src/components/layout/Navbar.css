@@ -1,0 +1,15 @@
+/* Shared header: readable brand lockup and balanced navigation. */
+.dad-nav { background:#faf9fcf2; border-bottom-color:#e9e0ee; box-shadow:0 5px 25px #35244805; }
+.dad-nav .nav-inner { min-height:100px; gap:24px; }
+.dad-nav .dad-brand { gap:14px; }
+.dad-nav .dad-brand-mark { width:54px; height:54px; border-radius:16px; }
+.dad-nav .dad-brand strong { font-size:18px; line-height:1.3; font-weight:600; letter-spacing:-.5px; }
+.dad-nav .dad-brand small { font-size:12px; line-height:1.5; font-weight:400; letter-spacing:0; color:#6c5a78; margin-top:4px; }
+.dad-nav .desktop-nav { gap:3px; padding:5px; border:1px solid #e6ddec; background:#eee8f380; border-radius:18px; }
+.dad-nav .desktop-nav a { font-size:12px; padding:11px 15px; color:#786580; border-radius:13px; white-space:nowrap; transition:color .2s,background .2s,box-shadow .2s; }
+.dad-nav .desktop-nav a:hover { color:#352448; background:#ffffff80; }
+.dad-nav .desktop-nav a[aria-current] { color:#352448; background:#fff; box-shadow:0 2px 7px #3a244410,inset 0 0 0 1px #e4d8eb; }
+.dad-nav .desktop-nav a[aria-current]::after { display:none; }
+@media(max-width:1150px) { .dad-nav .desktop-nav,.dad-nav .nav-cta { display:none; }.dad-nav .menu-toggle { display:block; } }
+@media(max-width:640px) { .dad-nav .nav-inner { min-height:82px; gap:12px; }.dad-nav .dad-brand { gap:10px; }.dad-nav .dad-brand-mark { width:46px; height:46px; border-radius:13px; }.dad-nav .dad-brand strong { font-size:16px; }.dad-nav .dad-brand small { font-size:11px; }.dad-nav .menu-toggle { padding:10px; flex-shrink:0; } }
+@media(max-width:360px) { .dad-nav .dad-brand small { white-space:normal; max-width:175px; }.dad-nav .dad-brand { flex-shrink:1; }.dad-nav .dad-brand-mark { flex-shrink:0; } }

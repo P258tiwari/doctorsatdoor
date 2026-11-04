@@ -1,0 +1,56 @@
+.home-page { overflow:clip; background:radial-gradient(ellipse 85% 850px at 95% 220px,#e9dbef99,transparent 80%),radial-gradient(ellipse 70% 1300px at 0 1800px,#e9dff380,transparent 85%),#faf9fc; }
+.home-page em { color:#8b659a; }
+.home-page .dad-section { padding:72px 0; background:transparent; }
+.home-page .dad-section h2 { font-size:clamp(34px,3.3vw,48px); line-height:1.14; font-weight:500; letter-spacing:-1.7px; }
+.home-page .section-heading>p,.home-page .section-intro { font-size:14px; line-height:1.85; color:#80718b; }
+.home-page .split-section { gap:65px; }
+.home-page .report-section { position:relative; isolation:isolate; padding-top:40px; }
+.home-page .report-section .product-name { font-size:10px; letter-spacing:1px; }.home-page .report-section .product-name img { width:46px; height:46px; }
+.home-page .product-grid { gap:24px; }.home-page .product-card { background:transparent; border:0; border-radius:0; }.home-page .product-card:hover { transform:none; }.home-page .product-photo { height:auto; aspect-ratio:1.15; border-radius:24px; overflow:hidden; }.home-page .product-photo img { transition:transform .3s ease; }.home-page .product-card:hover img { transform:scale(1.035); }.home-page .product-card-copy { padding:22px 0 0; }.home-page .product-card-copy h3 { font-size:21px; font-weight:500; }
+.home-page .roadmap-section { color:#29213d; }.home-page .roadmap-section .eyebrow { color:#80618e; }.home-page .roadmap-section .section-heading>p,.home-page .roadmap-section .small-note { color:#80718b; }.home-page .roadmap-grid article { border-color:#e0d4e8; border-radius:22px; background:#ffffff65; }.home-page .roadmap-grid article.current { background:#eee6f5; border-color:#cfb9dc; }.home-page .roadmap-number { font-size:54px; color:#8c6da0; opacity:1; margin:25px 0; }.home-page .roadmap-grid p { color:#80718b; }.home-page .roadmap-grid .current p { color:#6b5c76; }.home-page .roadmap-grid h3 { font-weight:500; font-size:18px; }
+.home-page .faq-grid { gap:65px; }.home-page .faq-item { padding:20px 0; }.home-page .faq-item summary { font-size:14px; font-weight:500; }.home-page .faq-item summary span { display:grid; place-items:center; width:28px; height:28px; flex-shrink:0; border-radius:50%; background:#ede5f3; font-size:20px; }
+.home-page .final-cta { background:transparent; color:#29213d; border:0; border-top:1px solid #ded3e7; border-radius:0; padding:45px 0 25px; margin-bottom:35px; }.home-page .final-cta .eyebrow { color:#80618e; }.home-page .final-cta h2 { font-size:clamp(34px,3.3vw,48px); font-weight:500; }
+@media(max-width:1050px) {.home-page .product-grid,.home-page .roadmap-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.home-page .split-section { gap:35px; } }
+@media(max-width:760px) {.home-page .split-section,.home-page .faq-grid { grid-template-columns:1fr; gap:32px; }.home-page .report-section .product-device-scene { order:2; }.home-page .dad-section { padding:48px 0; }.home-page .section-heading { gap:20px; } }
+@media(max-width:480px) {.home-page .product-grid,.home-page .roadmap-grid { gap:20px 14px; }.home-page .product-photo { border-radius:18px; }.home-page .product-card-copy h3 { font-size:17px; }.home-page .product-card-copy p { font-size:12px; }.home-page .roadmap-grid article { padding:18px 14px; }.home-page .roadmap-top { align-items:flex-start; flex-direction:column; }.home-page .roadmap-number { font-size:44px; }.home-page .product-name { flex-wrap:wrap; }.home-page .final-cta .button-row { flex-wrap:wrap; } }
+@media(prefers-reduced-motion:reduce) { .home-page .product-photo img { transition:none; } }
+.home-page .roadmap-description { min-height:3.6em; }
+@media(min-width:761px) {
+  .home-page .faq-grid > div:first-child {
+    position:sticky;
+    top:140px;
+    align-self:start;
+  }
+}
+.home-page .roadmap-description>span { display:block; }
+.report-benefits { list-style:none; padding:0; margin:26px 0 32px; border-top:1px solid #ded3e7; }
+.report-benefits li { display:flex; gap:15px; align-items:flex-start; padding:18px 0; border-bottom:1px solid #ded3e7; }
+.report-benefit-icon { display:grid; place-items:center; flex-shrink:0; width:40px; height:40px; border-radius:12px; background:#ece2f3; color:#89639c; }
+.report-benefits h3 { font-size:16px; font-weight:600; line-height:1.4; margin:0 0 5px; color:#29213d; }
+.report-benefits p { font-size:13px; line-height:1.7; color:#80718b; margin:0; }
+.home-page .faq-item summary span { padding:0; line-height:1; transform-origin:center; }
+.home-page .faq-item summary span svg { display:block; width:16px; height:16px; margin:0; }
+.home-page .product-photo { aspect-ratio:1.5; background:#191326; }
+.home-page .product-photo img { object-fit:contain; }
+.home-page .product-card:hover .product-photo img { transform:none; }
+.home-page .report-brand-labels { display:flex; align-items:center; flex-wrap:wrap; gap:10px; }
+.home-page .report-brand-labels > span:first-child { font-size:14px; font-weight:600; letter-spacing:.8px; }
+.home-page .report-ai-badge,.home-page .report-live-badge { display:inline-flex; align-items:center; gap:7px; padding:7px 12px; border-radius:999px; font-size:11px; font-weight:600; line-height:1.4; letter-spacing:0; white-space:nowrap; }
+.home-page .report-ai-badge { background:#edfacf; border:1px solid #d8e9ac; color:#3c4921; }
+.home-page .report-live-badge { background:#e7f4ee; border:1px solid #bce1d2; color:#24786a; }
+.home-page .report-live-badge>span { width:7px; height:7px; border-radius:50%; background:#399c80; }
+.home-page .final-cta { display:grid; grid-template-columns:1.35fr 1fr; align-items:center; gap:70px; padding:64px 0; margin-bottom:0; overflow:visible; background:radial-gradient(ellipse at 65% 50%,#eee4f46b,transparent 70%); }
+.home-page .final-cta h2 { font-size:clamp(34px,3.6vw,52px); line-height:1.15; letter-spacing:-1.8px; margin:24px 0 28px; }
+.home-page .final-cta h2 em { color:#8b659a; }
+.home-page .final-cta-action { border-left:1px solid #ded3e7; padding-left:50px; }
+.final-cta-product { display:flex; align-items:center; gap:15px; }
+.final-cta-product img { border-radius:15px; }
+.final-cta-product strong { display:block; font-size:17px; font-weight:600; }
+.final-cta-badges { display:flex; align-items:center; flex-wrap:wrap; gap:10px; margin-top:9px; }
+.home-page .final-cta-action p { font-size:15px; line-height:1.85; color:#786982; margin:22px 0 26px; max-width:420px; }
+@media(max-width:760px) {
+  .home-page .final-cta { grid-template-columns:1fr; gap:32px; padding:42px 0; }
+  .home-page .final-cta-action { border-left:0; border-top:1px solid #ded3e7; padding:28px 0 0; }
+  .home-page .final-cta h2 { letter-spacing:-1.2px; }
+}
+@media(max-width:480px) { .home-page .roadmap-grid { grid-template-columns:1fr; }.home-page .roadmap-top { flex-direction:row; align-items:center; } }

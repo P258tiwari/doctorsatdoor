@@ -1,0 +1,27 @@
+.release-page { padding:155px 0 85px; background:radial-gradient(ellipse 90% 700px at 95% 250px,#e8d9ee99,transparent 80%),radial-gradient(ellipse 70% 950px at 0 1000px,#ece5f680,transparent 85%),#faf9fc; }
+.release-heading { display:grid; grid-template-columns:1.8fr 1fr; align-items:end; gap:60px; padding-bottom:48px; }
+.release-heading h1 { font-size:clamp(42px,4.5vw,64px); line-height:1.08; font-weight:500; letter-spacing:-2.6px; margin:22px 0 0; }.release-heading h1 em { color:#8b659a; }
+.release-intro { max-width:310px; justify-self:end; padding-bottom:5px; }.release-intro p { font-size:14px; line-height:1.85; color:#80718b; margin-bottom:20px; }.release-intro a { display:inline-flex; gap:18px; align-items:center; font-size:12px; color:#4c355d; }
+.release-product { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:23px 0; border-block:1px solid #ded2e580; }.release-product>div { display:flex; align-items:center; gap:12px; }.release-product strong { font-size:13px; font-weight:600; }.release-product span { font-size:12px; color:#8a7795; }
+.release-timeline { padding-top:45px; scroll-margin-top:120px; }.release-row { display:grid; grid-template-columns:1fr 3fr; gap:45px; padding-bottom:36px; }
+.release-logo { border-radius:12px; flex-shrink:0; }
+.release-brand { display:flex; align-items:center; gap:13px; color:#352448; font-size:15px; font-weight:600; }
+.release-card { position:relative; }
+.release-card .release-card-top { position:absolute; top:28px; right:30px; justify-content:flex-end; margin:0; }
+.release-card>h2,.release-card>.release-summary { padding-right:70px; }
+@media(max-width:700px) { .release-card .release-card-top { top:23px; right:22px; }.release-card>h2,.release-card>.release-summary { padding-right:58px; } }
+.release-note { border-top:1px solid #e8dfed; padding-top:22px; margin:28px 0 0; font-size:12px; line-height:1.8; color:#796287; }
+.release-detail li strong { color:#50395f; font-weight:600; }
+.release-detail .release-changes { display:grid; gap:14px; }
+.release-detail .release-change { display:grid; grid-template-columns:48px minmax(0,1fr); gap:12px; align-items:start; margin:0; padding:0; border:0; border-radius:0; background:transparent; }
+.release-change-chip { display:inline-flex; justify-content:center; width:fit-content; min-width:45px; padding:3px 8px; border-radius:6px; font-size:10px; line-height:1.6; font-weight:600; }
+.release-change-chip-new { color:#506327; background:#edf5da; }.release-change-chip-upgrade { color:#75518a; background:#eee3f5; }.release-change-chip-fix { color:#73582e; background:#f7eddc; }
+.release-change h4 { display:inline; color:#483153; font-size:13px; font-weight:600; line-height:1.8; margin:0; }.release-change h4::after { content:": "; }.release-change p { display:inline; font-size:13px; line-height:1.8; color:#7e6c89; margin:0; }
+@media(max-width:600px) { .release-detail .release-change { grid-template-columns:43px minmax(0,1fr); gap:9px; padding:0; } }
+.release-date { padding-top:30px; display:flex; flex-direction:column; align-items:flex-start; gap:12px; }.release-date time { font-size:13px; color:#776184; }.release-date>span { font-size:36px; color:#4a345d; letter-spacing:-1px; font-weight:500; }.release-date strong { font-size:9px; text-transform:uppercase; letter-spacing:1.2px; font-weight:600; color:#8a6b9c; }
+.release-card { background:#ffffffa8; border:1px solid #e4d9ea; border-radius:26px; padding:35px 38px; box-shadow:0 10px 35px #3d215404; min-width:0; }.release-card-top { display:flex; justify-content:space-between; align-items:center; gap:15px; margin-bottom:18px; }.release-major { color:#67477b; background:#eee5f4; padding:6px 10px; border-radius:7px; font-size:10px; }
+.release-card h2 { font-size:clamp(25px,2.5vw,33px); line-height:1.25; font-weight:500; letter-spacing:-.9px; margin-bottom:15px; }.release-summary { font-size:14px; line-height:1.85; color:#7f6e8b; margin-bottom:28px; }
+.release-detail { padding-top:22px; margin-top:23px; border-top:1px solid #eee7f2; }.release-detail h3 { display:flex; align-items:center; gap:10px; font-size:13px; font-weight:600; color:#4f375f; margin-bottom:16px; }.release-detail h3 svg { color:#9473a5; }.release-detail ul { margin:0; padding:0; list-style:none; }.release-detail li { display:flex; align-items:flex-start; gap:12px; font-size:13px; line-height:1.8; color:#786786; margin-bottom:10px; }.release-detail li svg { flex-shrink:0; margin-top:4px; color:#9a7aab; stroke-width:1.5; }.release-empty { padding:40px 0; color:#796287; }
+@media(max-width:900px) { .release-heading { gap:30px; }.release-row { grid-template-columns:1fr 3fr; gap:25px; }.release-card { padding:28px; }.release-date>span { font-size:29px; } }
+@media(max-width:700px) { .release-page { padding-top:125px; }.release-heading { grid-template-columns:1fr; gap:24px; padding-bottom:30px; }.release-heading h1 { font-size:48px; }.release-intro { justify-self:start; max-width:430px; }.release-product { flex-wrap:wrap; }.release-product>div { flex-wrap:wrap; }.release-row { grid-template-columns:1fr; gap:18px; }.release-date { padding-top:0; flex-direction:row; align-items:center; flex-wrap:wrap; gap:15px; }.release-date>span { font-size:23px; order:-1; }.release-timeline { padding-top:30px; }.release-card { padding:25px 22px; border-radius:22px; }.release-card h2 { font-size:26px; } }
+@media(max-width:400px) { .release-heading h1 { font-size:41px; letter-spacing:-1.8px; }.release-product>div>span:last-child { font-size:10px; } }

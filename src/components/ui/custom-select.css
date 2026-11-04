@@ -1,0 +1,20 @@
+.custom-select { display:block; width:100%; min-width:0; }
+button.custom-select-trigger { display:flex; align-items:center; justify-content:space-between; gap:14px; width:100%; min-height:46px; padding:11px 14px; border:1px solid #d9cbe3; border-radius:12px; background:#ffffffa6; color:#493452; font:inherit; font-size:13px; line-height:1.5; text-align:left; cursor:pointer; transition:border-color .15s,background .15s,box-shadow .15s; }
+.custom-select-trigger>span { overflow:hidden; white-space:nowrap; text-overflow:ellipsis; min-width:0; }
+.custom-select-trigger>svg { flex-shrink:0; color:#947aa3; transition:rotate .15s; }
+button.custom-select-trigger:hover:not(:disabled) { background:#fff; border-color:#b697c7; }
+button.custom-select-trigger[aria-expanded=true] { border-color:#9772ab; background:#fff; box-shadow:0 0 0 3px #9876ac14; }
+.custom-select-trigger[aria-expanded=true]>svg { rotate:180deg; }
+button.custom-select-trigger:focus-visible { outline:2px solid #9876ac; outline-offset:3px; }
+button.custom-select-trigger:disabled { cursor:not-allowed; opacity:.5; }
+.custom-select-menu { box-sizing:border-box; padding:6px; border:1px solid #dfd1e7; border-radius:14px; background:#fdfbfe; color:#493452; box-shadow:0 12px 35px #35245224,0 2px 6px #35245208; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#d6c5e1 transparent; font-family:var(--font-geist-sans),Arial,sans-serif; }
+.custom-select-menu::backdrop { background:transparent; }
+.custom-select-option { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:40px; padding:10px 12px; margin:2px 0; border-radius:8px; font-size:13px; line-height:1.5; cursor:pointer; overflow-wrap:anywhere; }
+.custom-select-option>svg { color:#815893; flex-shrink:0; }
+.custom-select-option[aria-selected=true] { background:#f0e7f5; color:#624075; font-weight:550; }
+.custom-select-option.is-active { background:#e9ddf1; color:#513163; }
+.custom-select-option[aria-disabled=true] { opacity:.4; cursor:not-allowed; }
+.cms-toolbar .custom-select { width:145px; flex-shrink:0; }
+.cms-toolbar button.custom-select-trigger { display:flex; width:145px; height:34px; min-height:34px; padding:5px 10px; border:1px solid #dfd1e8; background:#fff; border-radius:8px; font-size:12px; }
+.workspace-main td .custom-select { min-width:130px; }
+@media(max-width:760px) { .custom-select-option { min-height:44px; } .cms-toolbar button.custom-select-trigger { height:38px; min-height:38px; } }
