@@ -12,8 +12,8 @@ import { INITIAL_REPORT_RELEASE_NOTE } from "@/lib/initial-release";
 import { formatDate } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata(
-  "Changelog: Product Updates",
-  "Follow the latest product updates, new AI features, improvements, and fixes for DAD Report and the DAD healthcare ecosystem.",
+  "Changelog: product updates",
+  "New features, improvements, and fixes for DAD Report and other DAD products.",
   "/changelog"
 );
 
@@ -33,10 +33,10 @@ async function ChangelogContent() {
           </div>
           <div className="release-intro">
             <p>
-              Thoughtful improvements, new possibilities, and the details that make everyday care simpler.
+              New features, improvements, and fixes, as we release them.
             </p>
             <a href="#release-timeline">
-              See what is new <ArrowDown size={16} />
+              See what’s new <ArrowDown size={16} />
             </a>
           </div>
         </header>
@@ -50,8 +50,8 @@ async function ChangelogContent() {
               width={42}
               height={42}
             />
-            <strong>DAD Ecosystem</strong>
-            <span>Product updates & release notes</span>
+            <strong>DAD products</strong>
+            <span>Product updates and release notes</span>
           </div>
           <Link href="/dad-report" className="text-link">
             Explore DAD Report <ArrowUpRight size={16} />
@@ -142,7 +142,7 @@ async function ChangelogContent() {
             );
           })}
           {entries.length === 0 && (
-            <p className="release-empty">Our next chapter is on its way. Check back for product updates.</p>
+            <p className="release-empty">No updates yet. Please check back soon.</p>
           )}
         </section>
       </div>

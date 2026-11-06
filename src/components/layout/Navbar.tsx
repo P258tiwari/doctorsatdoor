@@ -6,7 +6,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { ExploreDad } from "./ExploreDad";
 import { DadLogo } from "./DadLogo";
 import "./Navbar.css";
-const links = [["DAD Report", "/dad-report"], ["Ecosystem", "/#ecosystem"], ["Roadmap", "/#roadmap"], ["Insights", "/blog"], ["Contact", "/contact"]];
+const links = [["DAD Report", "/dad-report"], ["Ecosystem", "/#ecosystem"], ["Roadmap", "/#roadmap"], ["Journal", "/blog"], ["Contact", "/contact"]];
 export function Navbar() {
 const [open, setOpen] = useState(false); const pathname = usePathname();
 const [activeSection, setActiveSection] = useState("");

@@ -14,11 +14,11 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Doctors At Door (DAD) | Connected Digital Healthcare",
+    default: "Doctors At Door (DAD) | Connected digital healthcare",
     template: "%s | Doctors At Door",
   },
   description:
-    "Doctors At Door (DAD) connects patients, doctors, clinics, diagnostics and labs in one digital healthcare ecosystem. Explore DAD Report, our first live app.",
+    "DAD is building a platform that connects patients, doctors, clinics, and labs. Our first app, DAD Report, helps you organise, understand, and share medical reports.",
   applicationName: "Doctors At Door",
   authors: [{ name: "Doctors At Door Team", url: SITE_URL }],
 };

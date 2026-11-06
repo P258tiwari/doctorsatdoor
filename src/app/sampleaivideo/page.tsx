@@ -5,7 +5,7 @@ import { getPublicSampleVideo } from "@/lib/server/public-content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  ...pageMetadata("DAD Report Sample Video", "See a sample of DAD Report, the AI health-record app from Doctors At Door.", "/sampleaivideo"),
+  ...pageMetadata("DAD Report Sample Video", "Watch a sample video from DAD Report, the Doctors At Door app for your medical reports.", "/sampleaivideo"),
   robots: { index: false, follow: true },
 };
 

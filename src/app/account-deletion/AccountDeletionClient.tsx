@@ -42,7 +42,7 @@ export function AccountDeletionClient() {
     }
 
     if (!formData.confirmed) {
-      setErrorMsg("You must confirm that you understand this action is permanent and irreversible.");
+      setErrorMsg("Please confirm that you understand deletion is permanent.");
       return;
     }
 
@@ -61,7 +61,7 @@ export function AccountDeletionClient() {
         setSubmitted(true);
       }
     } catch (err: unknown) {
-      setErrorMsg(`${err instanceof Error ? err.message : "Failed to submit request."} You can also email privacy@doctorsatdoor.com.`);
+      setErrorMsg(`${err instanceof Error ? err.message : "We could not submit your request."} You can also email privacy@doctorsatdoor.com.`);
     } finally {
       setIsSubmitting(false);setCaptchaToken('');setCaptchaReset(n=>n+1);
     }
@@ -74,16 +74,16 @@ export function AccountDeletionClient() {
           <CheckCircle2 className="w-7 h-7" />
         </div>
         <h3 className="text-2xl font-bold text-slate-900">
-          Deletion Request Registered
+          Deletion request received
         </h3>
         <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-          Your request has been officially recorded.
+          We have received your request. Please keep this reference ID.
         </p>
         <div className="deletion-reference">
           <span className="deletion-reference-label">REFERENCE ID</span>
           <div className="deletion-reference-value"><code>{requestId}</code><button type="button" aria-label={copyMessage === 'Reference ID copied.' ? 'Reference ID copied' : 'Copy reference ID'} title="Copy reference ID" onClick={async () => {
             try { await navigator.clipboard.writeText(requestId); setCopyMessage('Reference ID copied.'); }
-            catch { setCopyMessage('Unable to copy automatically. Select and copy the reference ID.'); }
+            catch { setCopyMessage('Could not copy. Please select the reference ID and copy it.'); }
           }}>{copyMessage === 'Reference ID copied.' ? <Check size={18} /> : <Copy size={18} />}</button></div>
           {copyMessage && <small role="status">{copyMessage}</small>}
         </div>
@@ -98,10 +98,10 @@ export function AccountDeletionClient() {
     <div className="deletion-form-panel space-y-6">
       <div>
         <h2 className="text-xl font-bold text-slate-900">
-          Account Deletion Request Form
+          Request account deletion
         </h2>
         <p className="text-xs text-slate-500 mt-1">
-          Provide your account details to initiate verified data purge.
+          Enter your account details. We will verify your identity before deleting anything.
         </p>
       </div>
 
@@ -115,7 +115,7 @@ export function AccountDeletionClient() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="deletion-name" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-            Full Name *
+            Full name *
           </label>
           <input
             id="deletion-name"
@@ -130,7 +130,7 @@ export function AccountDeletionClient() {
 
         <div>
           <label htmlFor="deletion-contact" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-            Registered Email or Phone Number *
+            Registered email or phone number *
           </label>
           <input
             id="deletion-contact"
@@ -145,13 +145,13 @@ export function AccountDeletionClient() {
 
         <div>
           <label htmlFor="deletion-account" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-            Account Identifier / DAD Report Username *
+            DAD Report username or account ID *
           </label>
           <input
             id="deletion-account"
             type="text"
             required
-            placeholder="e.g. rajesh_sharma or account profile ID"
+            placeholder="e.g. rajesh_sharma"
             value={formData.accountIdentifier}
             onChange={(e) => setFormData({ ...formData, accountIdentifier: e.target.value })}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none"
@@ -160,12 +160,12 @@ export function AccountDeletionClient() {
 
         <div>
           <label htmlFor="deletion-reason" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-            Reason for Deletion (Optional)
+            Reason for deletion (optional)
           </label>
           <textarea
             id="deletion-reason"
             rows={3}
-            placeholder="Tell us why you are deleting your account (e.g., no longer needing record organization, switching providers)..."
+            placeholder="Tell us why you want to delete your account."
             value={formData.reason}
             onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none"
@@ -182,7 +182,7 @@ export function AccountDeletionClient() {
               className="mt-1 w-4 h-4 text-rose-600 rounded border-slate-300"
             />
             <span className="text-xs text-slate-700 leading-snug">
-              I understand that submitting this request initiates irreversible deletion of my medical records, AI summaries, and account history from DAD Report.
+              I understand that, once processed, this request permanently deletes my medical reports, AI summaries, and account history from DAD Report.
             </span>
           </label>
         </div>
@@ -195,11 +195,11 @@ export function AccountDeletionClient() {
           className="w-full py-3.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm shadow-md shadow-rose-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
         >
           {isSubmitting ? (
-            <span>Submitting Deletion Request...</span>
+            <span>Submitting…</span>
           ) : (
             <>
               <Trash2 className="w-4 h-4" />
-              <span>Submit Irreversible Account Deletion Request</span>
+              <span>Request account deletion</span>
             </>
           )}
         </button>

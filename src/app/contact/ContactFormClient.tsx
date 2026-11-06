@@ -13,12 +13,12 @@ interface ContactFormClientProps {
 }
 
 const INQUIRY_TYPES: { id: LeadType; label: string; desc: string }[] = [
-  { id: "investor", label: "Funding / Investor", desc: "Venture capital, angels & institutional investors" },
-  { id: "clinic", label: "Clinic / Hospital", desc: "OPD practices & consulting doctor networks" },
-  { id: "diagnostic", label: "Diagnostic / Lab", desc: "Pathology labs & imaging scan centers" },
-  { id: "doctor", label: "Doctor / Specialist", desc: "Individual practitioners & specialist clinics" },
-  { id: "patient", label: "Patient / Family User", desc: "DAD Report users & individual accounts" },
-  { id: "partnership", label: "Partnership / Other", desc: "Media, APIs, research & cross-platform" },
+  { id: "investor", label: "Funding / investor", desc: "Venture capital, angel, and institutional investors" },
+  { id: "clinic", label: "Clinic / hospital", desc: "OPD practices and doctor networks" },
+  { id: "diagnostic", label: "Diagnostic centre / lab", desc: "Pathology labs and imaging centres" },
+  { id: "doctor", label: "Doctor / specialist", desc: "Individual doctors and specialist clinics" },
+  { id: "patient", label: "Patient / family", desc: "DAD Report users who need help" },
+  { id: "partnership", label: "Partnership / other", desc: "Media, technology, research, and other partners" },
 ];
 
 export function ContactFormClient({ defaultType }: ContactFormClientProps) {
@@ -82,10 +82,10 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
       if (res.success) {
         setSubmitted(true);
       } else {
-        setErrorMsg("Submission failed. Please try again or email us directly.");
+        setErrorMsg("We could not send your message. Please try again or email support@doctorsatdoor.com.");
       }
     } catch (err: unknown) {
-      setErrorMsg(err instanceof Error ? err.message : "An unexpected error occurred. Please try again.");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
     } finally {
       setIsSubmitting(false);setCaptchaToken('');setCaptchaReset(n=>n+1);
     }
@@ -98,10 +98,10 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           <CheckCircle2 className="w-8 h-8" />
         </div>
         <h3 className="text-2xl font-bold text-slate-900">
-          Message Received
+          Message received
         </h3>
         <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-          Thank you for reaching out to Doctors At Door. Your submission has been securely logged into our coordination system. Our team will review your requirements and reach out within 24 business hours.
+          Thank you for contacting Doctors At Door. Our team will review your message and get back to you.
         </p>
         <button
           type="button"
@@ -119,7 +119,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           }}
           className="mt-2 text-xs font-semibold text-indigo-600 hover:underline"
         >
-          Send another message &rarr;
+          Send another message
         </button>
       </div>
     );
@@ -129,10 +129,10 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
     <div className="contact-form-panel space-y-6">
       <div>
         <h3 className="text-xl font-bold text-slate-900">
-          Tell us what you have in mind.
+          Send us a message
         </h3>
         <p className="text-xs text-slate-500 mt-1">
-          Choose a topic and tell us how we can help.
+          Choose who you are, then tell us how we can help.
         </p>
       </div>
 
@@ -146,7 +146,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
       {/* Category Selector Grid */}
       <div className="space-y-2">
         <p className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
-          1. Select Your Category *
+          1. Choose who you are *
         </p>
         <div className="contact-categories">
           {INQUIRY_TYPES.map((type) => {
@@ -181,13 +181,13 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
 
       <form onSubmit={handleSubmit} className="space-y-4 pt-2">
         <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider">
-          2. Enter Your Details *
+          2. Enter your details *
         </label>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="contact-field-0" className="block text-[11px] font-semibold text-slate-600 mb-1">
-              Full Name *
+              Full name *
             </label>
             <input id="contact-field-0"
               type="text"
@@ -200,7 +200,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           </div>
           <div>
             <label htmlFor="contact-field-1" className="block text-[11px] font-semibold text-slate-600 mb-1">
-              Work / Personal Email *
+              Email *
             </label>
             <input id="contact-field-1"
               type="email"
@@ -216,7 +216,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div>
             <label htmlFor="contact-field-2" className="block text-[11px] font-semibold text-slate-600 mb-1">
-              Phone / WhatsApp
+              Phone or WhatsApp (optional)
             </label>
             <input id="contact-field-2"
               type="tel"
@@ -228,7 +228,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           </div>
           <div>
             <label htmlFor="contact-field-3" className="block text-[11px] font-semibold text-slate-600 mb-1">
-              City / State
+              City and state (optional)
             </label>
             <input id="contact-field-3"
               type="text"
@@ -240,7 +240,7 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           </div>
           <div>
             <label htmlFor="contact-field-4" className="block text-[11px] font-semibold text-slate-600 mb-1">
-              Organization (Optional)
+              Organisation (optional)
             </label>
             <input id="contact-field-4"
               type="text"
@@ -254,11 +254,11 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
 
         <div>
           <label htmlFor="contact-field-5" className="block text-[11px] font-semibold text-slate-600 mb-1">
-            Subject
+            Subject (optional)
           </label>
             <input id="contact-field-5"
             type="text"
-            placeholder="e.g. Exploring Series Seed / Clinic Pilot Inquiry"
+            placeholder="e.g. Clinic partnership"
             value={formData.subject}
             onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none"
@@ -267,12 +267,12 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
 
         <div>
           <label htmlFor="contact-field-6" className="block text-[11px] font-semibold text-slate-600 mb-1">
-            Message &bull; How can we collaborate? *
+            Message *
           </label>
             <textarea id="contact-field-6"
             rows={4}
             required
-            placeholder="Describe your clinic, fund, laboratory test volume, or specific collaboration interest..."
+            placeholder="Tell us how we can help."
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none"
@@ -287,17 +287,17 @@ export function ContactFormClient({ defaultType }: ContactFormClientProps) {
           className="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-600/20 transition-all flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
         >
           {isSubmitting ? (
-            <span>Sending message...</span>
+            <span>Sending…</span>
           ) : (
             <>
               <Send className="w-4 h-4" />
-              <span>Send Message</span>
+              <span>Send message</span>
             </>
           )}
         </button>
 
         <p className="text-center text-xs text-slate-500">
-          Your details help us respond to your inquiry. Please do not include medical records.
+          We use your details to reply to you. Please do not include medical reports.
         </p>
       </form>
     </div>

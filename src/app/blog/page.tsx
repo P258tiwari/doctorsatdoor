@@ -11,8 +11,8 @@ import { BlogListClient } from "./BlogListClient";
 import "./journal-index.css";
 
 export const metadata: Metadata = pageMetadata(
-  "The DAD Journal: Healthcare Insights",
-  "Ideas, stories, and perspectives on a more connected healthcare journey, from the team building the Doctors At Door ecosystem.",
+  "The DAD Journal: healthcare articles",
+  "Articles about connected healthcare from the team building Doctors At Door.",
   "/blog"
 );
 
@@ -33,7 +33,7 @@ async function BlogContent() {
           </div>
           <div className="journal-index-intro">
             <p>
-              Ideas, stories, and perspectives for a more connected, more human healthcare future.
+              Articles and stories about more connected, more human healthcare.
             </p>
             <a href="#journal-stories">
               Explore the journal <ArrowDown size={16} />

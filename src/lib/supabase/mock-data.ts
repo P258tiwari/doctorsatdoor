@@ -113,7 +113,7 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-1",
     question: "What is Doctors At Door (DAD)?",
     answer:
-      "Doctors At Door (DAD) is a digital healthcare ecosystem startup building a connected cloud platform. Our mission is to solve healthcare fragmentation by digitally linking patients, doctors, outpatient clinics, hospitals, diagnostic centers, labs, pharmacies, and future care services through one coordinated layer.",
+      "Doctors At Door (DAD) is a healthcare technology company. We are building a platform that connects patients, doctors, clinics, hospitals, diagnostic centres, labs, and pharmacies.",
     category: "general",
     order_index: 1,
   },
@@ -121,7 +121,7 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-2",
     question: "What is DAD Report?",
     answer:
-      "DAD Report is the first live, active application from Doctors At Door. It is a health-record app that organizes scattered medical files into a chronological timeline, explains lab results through plain-language AI summaries and avatar-narrated videos, decodes health insurance policies, organizes records into treatment folders, and tracks diagnostic appointments.",
+      "DAD Report is an app that helps you organise, understand, and share your medical reports. You can upload reports, see them on a timeline, read AI summaries, create folders, add family members, and get an AI explanation of your insurance policy.",
     category: "dad_report",
     order_index: 2,
   },
@@ -129,7 +129,7 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-3",
     question: "Is DAD Report live right now?",
     answer:
-      "Yes! DAD Report is currently live and active for patients and families. You can explore and use it directly at report.doctorsatdoor.com or through our dedicated product section on this website.",
+      "Yes. DAD Report is live. You can use it at report.doctorsatdoor.com.",
     category: "dad_report",
     order_index: 3,
   },
@@ -137,23 +137,23 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-4",
     question: "Are DAD Admin, DAD Lab, and DAD Diagnostic live yet?",
     answer:
-      "No. DAD Admin, DAD Lab, and DAD Diagnostic are part of our Phase 2 roadmap ('Coming Soon'). DAD Admin will power clinic and doctor OPD workflows, DAD Lab will integrate diagnostic laboratory LIMS systems, and DAD Diagnostic will manage test bookings and home sample collections. Clinics and labs interested in pilot access can contact us today.",
+      "Not yet. DAD Admin, DAD Lab, and DAD Diagnostic are planned. DAD Admin is for clinics, DAD Lab is for labs, and DAD Diagnostic is for diagnostic centres. Clinics and labs interested in early access can contact us.",
     category: "ecosystem",
     order_index: 4,
   },
   {
     id: "faq-5",
-    question: "Can I manage health records for my entire family?",
+    question: "Can I manage reports for my family?",
     answer:
-      "Yes. DAD Report allows you to create and manage separate profiles for your children, spouse, or elderly parents under one unified account, while keeping their individual medical histories organized and securely segregated.",
+      "Yes. You can add family members, such as your children, spouse, or parents, to your account. Each person’s reports stay separate. Switch profiles to view a family member’s reports.",
     category: "dad_report",
     order_index: 5,
   },
   {
     id: "faq-6",
-    question: "Is DAD a hospital, clinic, or diagnostic center itself?",
+    question: "Is DAD a hospital, clinic, or diagnostic centre?",
     answer:
-      "No. DAD is a healthcare technology platform and ecosystem layer. We do not provide medical consultations or run diagnostic equipment directly. Instead, we digitally connect patients with verified doctors, certified laboratories, and accredited healthcare providers.",
+      "No. DAD is a healthcare technology platform. We do not provide medical consultations or run diagnostic tests. We help patients connect with doctors and healthcare providers.",
     category: "general",
     order_index: 6,
   },
@@ -161,15 +161,15 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-7",
     question: "Can DAD's AI summaries replace my doctor's advice?",
     answer:
-      "Never. DAD's AI summaries and video explanations are educational tools designed to help you understand terminology and prepare for your appointments. They do not constitute medical diagnoses, prescriptions, or treatment plans. Always consult your qualified healthcare practitioner for medical decisions.",
+      "No. AI summaries and AI video explanations help you understand medical terms and prepare for appointments. They are not diagnoses, prescriptions, or treatment plans. Always ask your doctor before making medical decisions.",
     category: "privacy",
     order_index: 7,
   },
   {
     id: "faq-8",
-    question: "How do you protect data security and privacy?",
+    question: "How do you protect my data and privacy?",
     answer:
-      "Your health data belongs solely to you. Records are encrypted at rest and in transit. DAD never sells personal health data or shares records with third parties without your explicit, user-controlled authorization. You can revoke access or request permanent account deletion at any time.",
+      "Your reports belong to you. Records are encrypted when stored and when sent. DAD does not sell personal health data or share your reports without your permission. You can stop sharing or request account deletion at any time.",
     category: "privacy",
     order_index: 8,
   },
@@ -177,15 +177,15 @@ export const DEFAULT_FAQS: FAQItem[] = [
     id: "faq-9",
     question: "Can clinics, doctors, and diagnostic labs partner with DAD?",
     answer:
-      "Yes! We are actively collaborating with forward-thinking doctors, polyclinics, diagnostic labs, and healthcare networks for our Phase 2 pilot programs. Reach out via our Partnership Inquiry form on our Contact page.",
+      "Yes. We are looking for doctors, clinics, diagnostic labs, and healthcare networks to join our pilot programmes. Contact us through the contact page.",
     category: "partnerships",
     order_index: 9,
   },
   {
     id: "faq-10",
-    question: "How can investors or venture collaborators connect with DAD?",
+    question: "How can investors contact DAD?",
     answer:
-      "We welcome strategic health-tech investors and institutional ecosystem partners who share our conviction to fix healthcare fragmentation. Please use the 'Funding / Investor' selector on our Contact page or email us directly at investors@doctorsatdoor.com.",
+      "We welcome health-tech investors who share our goal of making healthcare less fragmented. Choose 'Funding / investor' on our contact page, or email investors@doctorsatdoor.com.",
     category: "partnerships",
     order_index: 10,
   },

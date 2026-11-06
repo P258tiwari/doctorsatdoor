@@ -18,8 +18,8 @@ import { getPublicFAQs } from "@/lib/server/public-content";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata(
-  "Doctors At Door (DAD) | Connected Digital Healthcare",
-  "Doctors At Door (DAD) connects patients, doctors, clinics, diagnostics and labs in one digital healthcare ecosystem. Explore DAD Report, our first live app.",
+  "Doctors At Door (DAD) | Connected digital healthcare",
+  "DAD is building a platform that connects patients, doctors, clinics, and labs. Our first app, DAD Report, helps you organise, understand, and share medical reports.",
   "/"
 );
 

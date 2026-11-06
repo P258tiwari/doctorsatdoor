@@ -14,10 +14,10 @@ export function PartnershipSection() {
         <div className="future-connections-grid">
           <div className="future-connections-copy">
             <h2 id="future-connections-title">Different places.<br /><em>One care journey.</em></h2>
-            <p>Home, clinic, lab, diagnostic centre. Each holds a part of your health story. Our vision is to help those parts connect, so the next team can understand what came before.</p>
-            <p className="future-connections-invite">We’re looking to build with care providers, technology partners, and investors who share that ambition.</p>
+            <p>Home, clinic, lab, diagnostic centre. Each holds part of your health story. We want to connect them, so your next care team knows what came before.</p>
+            <p className="future-connections-invite">We want to work with care providers, technology partners, and investors who share this goal.</p>
             <div className="future-connections-actions">
-              <Link href="/contact?type=partnership" className="dad-button lime">Build with DAD <ArrowUpRight size={18} /></Link>
+              <Link href="/contact?type=partnership" className="dad-button lime">Partner with DAD <ArrowUpRight size={18} /></Link>
               <Link href="/contact?type=investor" className="text-link">Discuss funding <ArrowUpRight size={18} /></Link>
             </div>
           </div>
@@ -29,7 +29,7 @@ export function PartnershipSection() {
         </div>
         <div className="future-connections-bottom">
           <span>Starting with records. Building towards continuity.</span>
-          <p>DAD Report is live today. Wider clinic, lab, and diagnostic integrations are planned and will develop in phases.</p>
+          <p>DAD Report is live. Clinic, lab, and diagnostic connections are planned and will be added in phases.</p>
         </div>
       </div>
     </section>
