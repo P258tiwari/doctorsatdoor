@@ -85,7 +85,7 @@ main article.prose, .legal-content { line-height:1.9; }
 
 
 .legal-toc{max-width:850px;margin:40px auto 0;padding:26px 30px;border:1px solid #e2d8e9;background:#f5f0f8;border-radius:24px;display:flex;flex-wrap:wrap;gap:10px 22px}.legal-toc strong{width:100%;font-size:14px;margin-bottom:8px}.legal-toc a{font-size:12px;color:#796087;line-height:1.8}.legal-content h2{font-weight:550;padding-top:18px}.legal-content p,.legal-content li{line-height:1.9}.admin-shell aside{background:#211a43}.admin-shell aside nav button{min-height:44px}.admin-shell main{min-width:0}.admin-shell input,.admin-shell textarea,.admin-shell select{min-height:44px}.admin-login{background:radial-gradient(ellipse at 80% 15%,#d9c0df,transparent 70%),#f5eff8}.admin-login>div{background:#fff;color:#211a43;border-color:#e2d6e9}.admin-login input,.admin-login select{background:#faf8fc;color:#211a43;border-color:#dfd3e6}.admin-login label{color:#796b85}.not-found-page{padding:150px 24px 90px;display:flex;flex-direction:column;align-items:center;text-align:center;background:#f5eff8}.not-found-page>.eyebrow{margin-top:30px}.not-found-page h1{font-size:60px;line-height:1.1;margin:25px 0}.not-found-page p{color:#7f6f8c;font-size:14px}.not-found-page .button-row{justify-content:center}
-@media(max-width:640px){.legal-toc{margin:24px 20px 0;padding:22px}.not-found-page h1{font-size:45px}.admin-shell aside nav{display:flex;flex-wrap:wrap;gap:8px}.admin-shell aside nav button{width:auto;flex:1;min-width:130px}}
+@media(max-width:640px){.not-found-page h1{font-size:45px}.admin-shell aside nav{display:flex;flex-wrap:wrap;gap:8px}.admin-shell aside nav button{width:auto;flex:1;min-width:130px}}
 
 
 @media(min-width:641px) and (max-width:900px){.contact-photo .care-photo{aspect-ratio:2}}
